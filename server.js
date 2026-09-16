@@ -15,36 +15,130 @@ const decoyHTML = `<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AulaDigital 360 | Plataforma de Recursos Educativos - ESO y Bachillerato</title>
-<meta name="description" content="Plataforma oficial de recursos digitales para ESO y Bachillerato.">
+<title>YouTube</title>
+<link rel="icon" href="https://www.youtube.com/s/desktop/12d6b690/img/favicon_32x32.png">
 <script src="https://cdn.tailwindcss.com"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Merriweather:wght@700&display=swap" rel="stylesheet">
-<style>body{font-family:Inter,sans-serif}</style>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<style>body{font-family:Roboto,Arial,sans-serif} .scroll-hide::-webkit-scrollbar{display:none}</style>
 </head>
-<body class="bg-[#f8fafc] text-slate-800">
-<div class="bg-[#0f172a] text-slate-300 text-xs py-1.5 px-6 flex justify-between"><span>Consejer\u00eda de Educaci\u00f3n \u00B7 Recursos Digitales 2025/26</span><span>soporte@auladigital360.es \u00B7 900 123 456</span></div>
-<header class="bg-white border-b sticky top-0 z-20"><div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between"><div class="flex items-center gap-3"><div class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-600 to-indigo-600 flex items-center justify-center text-white font-extrabold">A</div><div><div class="font-extrabold leading-none text-slate-900">AulaDigital<span class="text-blue-600">360</span></div><div class="text-[11px] tracking-widest text-slate-500 font-semibold">RECURSOS \u00B7 ESO \u00B7 BACH</div></div><span class="ml-4 hidden md:inline text-xs bg-emerald-50 text-emerald-700 border border-emerald-200 px-2.5 py-1 rounded-full font-semibold">\u25CF Curso activo</span></div><nav class="hidden md:flex gap-6 text-sm font-medium text-slate-600"><a class="text-blue-600 border-b-2 border-blue-600 pb-1" href="/">Inicio</a><a href="/biblioteca" class="hover:text-slate-900">Biblioteca</a><a href="/asignaturas" class="hover:text-slate-900">Asignaturas</a><a href="/calendario" class="hover:text-slate-900">Calendario</a><a href="/contacto" class="hover:text-slate-900">Contacto</a></nav><a href="/intranet" class="hidden md:inline text-xs font-semibold bg-slate-900 text-white px-4 py-2 rounded-lg hover:bg-black">Acceso docente</a></div></header>
-<section class="max-w-6xl mx-auto px-6 py-8 grid lg:grid-cols-5 gap-6"><div class="lg:col-span-3 bg-gradient-to-br from-blue-600 to-indigo-700 rounded-2xl p-8 text-white relative overflow-hidden"><div class="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full"></div><div class="absolute -right-6 -bottom-6 w-32 h-32 bg-white/10 rounded-full"></div><p class="text-blue-100 text-xs font-bold tracking-widest">NUEVO \u00B7 CURSO 2025/2026</p><h1 class="text-3xl font-extrabold leading-tight mt-2" style="font-family:Merriweather,serif">Todo tu material de clase,<br>organizado y siempre a mano.</h1><p class="text-blue-100 mt-3 text-sm leading-relaxed">Biblioteca con +2.400 recursos verificados por docentes. PDFs, presentaciones y videos ordenados por curso y trimestre.</p><div class="mt-5 flex gap-2"><div class="flex-1 bg-white rounded-xl flex items-center px-3 py-2.5 text-slate-500 text-sm"><span class="mr-2">\uD83D\uDD0D</span><input placeholder="Buscar: &apos;Funciones 4\u00BA&apos;, &apos;C\u00e9lula&apos;..." class="w-full outline-none text-slate-700 placeholder:text-slate-400"></div><button class="bg-slate-900 text-white px-5 rounded-xl text-sm font-semibold">Buscar</button></div><div class="flex gap-4 mt-4 text-xs text-blue-100"><span>\u2714 1.247 alumnos</span><span>\u2714 38 docentes</span><span>\u2714 Actualizado hoy 09:41</span></div></div><div class="lg:col-span-2 space-y-4"><div class="bg-white rounded-2xl border p-5"><div class="flex justify-between items-center mb-3"><h3 class="font-bold text-sm">Estado del curso</h3><span class="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded-full border">2\u00BA Trimestre</span></div><div class="space-y-3 text-sm"><div class="flex justify-between bg-slate-50 p-3 rounded-xl"><span>Matem\u00e1ticas 4\u00BA</span><span class="font-bold text-blue-600">78% completado</span></div><div class="flex justify-between bg-slate-50 p-3 rounded-xl"><span>Lengua y Literatura</span><span class="font-bold">64% completado</span></div><div class="flex justify-between bg-slate-50 p-3 rounded-xl"><span>Biolog\u00eda y Geolog\u00eda</span><span class="font-bold">91% completado</span></div></div></div><div class="bg-white rounded-2xl border p-5 flex items-center gap-4"><img src="https://i.pravatar.cc/100?img=12" class="w-10 h-10 rounded-full"><div class="text-sm"><div class="font-semibold">Prof. M. Rodr\u00edguez</div><div class="text-slate-500 text-xs">Coordinaci\u00f3n Acad\u00e9mica \u00B7 Tutor 4\u00BAB</div></div><span class="ml-auto text-xs bg-emerald-500 w-2 h-2 rounded-full"></span></div></div></section>
-<section class="max-w-6xl mx-auto px-6 grid md:grid-cols-3 gap-4"><div class="bg-white border rounded-2xl p-5"><div class="w-9 h-9 bg-blue-50 rounded-xl flex items-center justify-center">\uD83D\uDCC4</div><h3 class="font-bold mt-3 text-sm">Apuntes verificados</h3><p class="text-xs text-slate-500 mt-1">Revisados por departamento. Sin errores ni publicidad.</p></div><div class="bg-white border rounded-2xl p-5"><div class="w-9 h-9 bg-violet-50 rounded-xl flex items-center justify-center">\uD83C\uDFA5</div><h3 class="font-bold mt-3 text-sm">Videotutoriales</h3><p class="text-xs text-slate-500 mt-1">Clases grabadas de 10-15 min por tema.</p></div><div class="bg-white border rounded-2xl p-5"><div class="w-9 h-9 bg-emerald-50 rounded-xl flex items-center justify-center">\uD83D\uDCC5</div><h3 class="font-bold mt-3 text-sm">Calendario oficial</h3><p class="text-xs text-slate-500 mt-1">Ex\u00e1menes, entregas y tutor\u00edas sincronizadas.</p></div></section>
-<section class="max-w-6xl mx-auto px-6 mt-6 bg-white border rounded-2xl"><div class="p-5 border-b flex justify-between items-center"><h2 class="font-bold">Biblioteca \u00B7 \u00daltimos recursos</h2><span class="text-xs text-slate-500">Actualizado: hoy 08:20 \u00B7 Mostrando 6 de 2.412</span></div><div class="overflow-auto"><table class="w-full text-sm"><thead class="text-xs text-slate-500 bg-slate-50"><tr><th class="text-left p-3 font-semibold">Recurso</th><th class="text-left p-3">Curso</th><th class="text-left p-3">Fecha</th><th class="text-right p-3"></th></tr></thead><tbody class="divide-y"><tr><td class="p-3"><div class="font-medium">Matem\u00e1ticas - Funciones y gr\u00e1ficas (UD 6) \u00B7 PDF</div><div class="text-xs text-slate-500">Dpto. Matem\u00e1ticas \u00B7 34 p\u00e1g.</div></td><td class="p-3 text-xs">4\u00BA ESO</td><td class="p-3 text-xs">12/09/2025</td><td class="p-3 text-right"><a class="text-blue-600 font-semibold text-xs border border-blue-200 px-3 py-1.5 rounded-lg">Descargar</a></td></tr><tr><td class="p-3"><div class="font-medium">Historia - La Revoluci\u00f3n Industrial \u00B7 Presentaci\u00f3n</div><div class="text-xs text-slate-500">Dpto. Historia \u00B7 42 diapos.</div></td><td class="p-3 text-xs">4\u00BA ESO</td><td class="p-3 text-xs">10/09/2025</td><td class="p-3 text-right"><a class="text-blue-600 font-semibold text-xs border border-blue-200 px-3 py-1.5 rounded-lg">Ver</a></td></tr><tr><td class="p-3"><div class="font-medium">Biolog\u00eda - La c\u00e9lula eucariota \u00B7 Apuntes + test</div><div class="text-xs text-slate-500">Dpto. Biolog\u00eda \u00B7 18 p\u00e1g. + 20 preg.</div></td><td class="p-3 text-xs">1\u00BA Bach</td><td class="p-3 text-xs">09/09/2025</td><td class="p-3 text-right"><a class="text-blue-600 font-semibold text-xs border border-blue-200 px-3 py-1.5 rounded-lg">Abrir</a></td></tr><tr><td class="p-3"><div class="font-medium">Lengua - Comentario de texto resuelto \u00B7 Modelo EVAU</div><div class="text-xs text-slate-500">Dpto. Lengua \u00B7 Plantilla</div></td><td class="p-3 text-xs">2\u00BA Bach</td><td class="p-3 text-xs">08/09/2025</td><td class="p-3 text-right"><a class="text-blue-600 font-semibold text-xs border border-blue-200 px-3 py-1.5 rounded-lg">Descargar</a></td></tr></tbody></table></div><div class="p-3 text-center text-xs text-slate-400">Mostrando recursos p\u00fablicos. Inicia sesi\u00f3n como docente para ver el archivo completo.</div></section>
-<footer class="max-w-6xl mx-auto px-6 py-8 text-xs text-slate-400 text-center">\u00A9 2026 AulaDigital360 \u00B7 Proyecto colaborativo de centros p\u00fablicos \u00B7 <a href="#" class="underline">Privacidad</a> \u00B7 <a href="#" class="underline">Aviso legal</a> \u00B7 <a href="#" class="underline">Contacto</a><br><span class="opacity-60">v2.4.1 \u00B7 Build 20250912 \u00B7 Conforme RGPD</span></footer>
+<body class="bg-white text-[#0f0f0f]">
+<!-- Header YouTube -->
+<header class="flex items-center justify-between px-4 py-2 sticky top-0 bg-white z-30">
+  <div class="flex items-center gap-4">
+    <button class="p-2 hover:bg-zinc-100 rounded-full"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="1.5" fill="none"/></svg></button>
+    <a href="/" class="flex items-center gap-[1px]">
+      <svg width="93" height="20" viewBox="0 0 93 20"><g><path d="M14.48 3.53a1.5 1.5 0 0 0-1.06-.43H2.58a1.5 1.5 0 0 0-1.06.43 1.5 1.5 0 0 0-.43 1.06v10.82a1.5 1.5 0 0 0 .43 1.06 1.5 1.5 0 0 0 1.06.43h10.84a1.5 1.5 0 0 0 1.06-.43 1.5 1.5 0 0 0 .43-1.06V4.59a1.5 1.5 0 0 0-.43-1.06z" fill="#FF0000"/><path d="M10.2 10.2l-4.2 2.4V7.8l4.2 2.4z" fill="#fff"/></g><text x="18" y="15" font-size="16" font-weight="600" letter-spacing="-0.5">YouTube</text><text x="82" y="7" font-size="7" fill="#606060">ES</text></svg>
+    </a>
+  </div>
+  <div class="flex-1 max-w-[640px] mx-8 hidden md:flex items-center">
+    <div class="flex flex-1"><input placeholder="Buscar" class="flex-1 border border-zinc-300 rounded-l-full px-4 py-[7px] text-[16px] outline-none focus:border-blue-500"><button class="border border-l-0 border-zinc-300 rounded-r-full px-6 bg-zinc-50 hover:bg-zinc-100"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+    <button class="ml-3 p-2.5 bg-zinc-100 hover:bg-zinc-200 rounded-full"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a7 7 0 0 0-7 7v3l-2 2v1h18v-1l-2-2v-3a7 7 0 0 0-7-7z"/><path d="M9 18a3 3 0 0 0 6 0"/></svg></button>
+  </div>
+  <div class="flex items-center gap-2">
+    <button class="hidden md:inline bg-zinc-100 hover:bg-zinc-200 rounded-full p-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></button>
+    <button class="bg-zinc-100 hover:bg-zinc-200 rounded-full p-2 md:hidden"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg></button>
+    <img src="https://i.pravatar.cc/100?img=33" class="w-8 h-8 rounded-full ml-2">
+  </div>
+</header>
+
+<div class="flex">
+  <!-- Sidebar -->
+  <aside class="hidden lg:block w-[240px] shrink-0 px-3 py-3 sticky top-[56px] h-[calc(100vh-56px)] overflow-auto">
+    <div class="space-y-1 text-sm">
+      <a class="flex items-center gap-6 bg-zinc-100 rounded-xl px-3 py-2 font-medium"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> Inicio</a>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 8.5l8 3.5-8 3.5z"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg> Shorts</a>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 7v10M7 12h10"/><rect x="2" y="3" width="20" height="18" rx="2"/></svg> Suscripciones</a>
+      <hr class="my-3">
+      <div class="px-3 py-2 font-medium">T\u00fa <span class="ml-1">\u203A</span></div>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2 text-sm">Tu canal</a>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2 text-sm">Historial</a>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2 text-sm">Tus videos</a>
+      <a class="flex items-center gap-6 hover:bg-zinc-100 rounded-xl px-3 py-2 text-sm">Ver m\u00e1s tarde</a>
+      <hr class="my-3">
+      <div class="px-3 text-sm font-medium">Suscripciones</div>
+      <div class="space-y-1 mt-2">
+        <a class="flex items-center gap-3 px-3 py-1.5 hover:bg-zinc-100 rounded-xl text-sm"><img src="https://i.pravatar.cc/100?img=5" class="w-6 h-6 rounded-full">Midudev</a>
+        <a class="flex items-center gap-3 px-3 py-1.5 hover:bg-zinc-100 rounded-xl text-sm"><img src="https://i.pravatar.cc/100?img=8" class="w-6 h-6 rounded-full">ElRubius</a>
+        <a class="flex items-center gap-3 px-3 py-1.5 hover:bg-zinc-100 rounded-xl text-sm"><img src="https://i.pravatar.cc/100?img=15" class="w-6 h-6 rounded-full">Ibai</a>
+      </div>
+      <p class="px-3 pt-6 text-[11px] text-zinc-500 leading-tight">Informaci\u00f3n Prensa<br>Derechos de autor Contactar<br>Creadores Publicidad<br>Desarrolladores<br><br>T\u00e9rminos Privacidad<br>Pol\u00edtica y seguridad<br>C\u00f3mo funciona YouTube<br>Probar funciones nuevas<br><br>\u00A9 2026 Google LLC</p>
+    </div>
+  </aside>
+
+  <!-- Main -->
+  <main class="flex-1 min-w-0">
+    <!-- Chips -->
+    <div class="flex gap-2 px-4 py-3 overflow-auto scroll-hide sticky top-[56px] bg-white z-10 border-b md:border-0">
+      <span class="bg-black text-white px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap">Todo</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">M\u00fasica</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">Mixes</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">En directo</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">Videojuegos</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">F\u00fatbol</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">Noticias</span>
+      <span class="bg-zinc-100 hover:bg-zinc-200 px-3 py-1.5 rounded-lg text-sm whitespace-nowrap">Podcasts</span>
+    </div>
+
+    <!-- Video Grid -->
+    <div class="px-4 py-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-6">
+      <!-- Video 1 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt1/640/360" class="w-full h-full object-cover group-hover:scale-[1.02] transition"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">12:34</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=1" class="w-9 h-9 rounded-full shrink-0"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">Mix Reggaeton 2025 - Lo m\u00e1s pegado ahora (Visualizer)</div><div class="text-xs text-zinc-500 mt-1">Top Hits Latino \u00B7 2,1 M visualizaciones \u00B7 hace 3 d\u00edas</div></div></div>
+      </div>
+      <!-- Video 2 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt2/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">8:21</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=2" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">Aprende a programar en 10 minutos - HTML desde cero</div><div class="text-xs text-zinc-500 mt-1">Midudev \u00B7 445 k visualizaciones \u00B7 hace 1 semana</div></div></div>
+      </div>
+      <!-- Video 3 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt3/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">22:15</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=3" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">EL CL\u00c1SICO COMPLETO | Resumen y goles HD</div><div class="text-xs text-zinc-500 mt-1">LaLiga \u00B7 5,4 M visualizaciones \u00B7 hace 2 d\u00edas</div></div></div>
+      </div>
+      <!-- Video 4 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt4/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-red-600 text-white text-xs px-1 py-0.5 rounded font-bold">EN DIRECTO</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=4" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">24H Radio - LoFi Hip Hop para estudiar/relajarse</div><div class="text-xs text-zinc-500 mt-1">Lofi Girl \u00B7 12 k espectadores</div></div></div>
+      </div>
+      <!-- Video 5 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt5/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">15:03</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=6" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">Probando la comida callejera de M\u00e9xico \u00B7 $20 d\u00f3lares</div><div class="text-xs text-zinc-500 mt-1">Luisito Comunica \u00B7 1,8 M \u00B7 hace 5 d\u00edas</div></div></div>
+      </div>
+      <!-- Video 6 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt6/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">10:44</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=7" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">Minecraft pero cada bloque es aleatorio - Reto imposible</div><div class="text-xs text-zinc-500 mt-1">Vegetta777 \u00B7 892 k \u00B7 hace 1 d\u00eda</div></div></div>
+      </div>
+      <!-- Video 7 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt7/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">18:22</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=9" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">C\u00f3mo hice mi setup gamer por menos de 500\u20AC</div><div class="text-xs text-zinc-500 mt-1">Tecnonauta \u00B7 234 k \u00B7 hace 4 d\u00edas</div></div></div>
+      </div>
+      <!-- Video 8 -->
+      <div class="cursor-pointer group">
+        <div class="relative rounded-xl overflow-hidden bg-zinc-200 aspect-video"><img src="https://picsum.photos/seed/yt8/640/360" class="w-full h-full object-cover"><span class="absolute bottom-1 right-1 bg-black/80 text-white text-xs px-1 py-0.5 rounded">31:09</span></div>
+        <div class="flex gap-3 pt-3"><img src="https://i.pravatar.cc/100?img=10" class="w-9 h-9 rounded-full"><div><div class="text-sm font-medium leading-[18px] line-clamp-2">Documental: La historia de Internet (1990-2025)</div><div class="text-xs text-zinc-500 mt-1">Quenq \u00B7 12 k \u00B7 hace 9 horas</div></div></div>
+      </div>
+    </div>
+  </main>
+</div>
 </body>
 </html>`;
 
-const loginHTML = (err="") => `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Intranet Docente - AulaDigital360</title><script src="https://cdn.tailwindcss.com"></script><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"></head><body class="bg-slate-100 min-h-screen flex items-center justify-center p-6" style="font-family:Inter,sans-serif"><div class="w-full max-w-sm"><div class="text-center mb-6"><div class="w-12 h-12 bg-slate-900 rounded-xl flex items-center justify-center text-white font-extrabold mx-auto">A</div><h1 class="font-bold mt-3">Intranet docente</h1><p class="text-xs text-slate-500">Acceso restringido a profesorado autorizado</p></div><div class="bg-white rounded-2xl border shadow-sm p-6">${err?`<div class="bg-red-50 border border-red-200 text-red-700 text-xs p-3 rounded-xl mb-4">${err}</div>`:""}<form method="POST" action="/login" class="space-y-3"><div><label class="text-xs font-semibold text-slate-600">Usuario</label><input value="docente" disabled class="w-full mt-1 bg-slate-50 border rounded-xl px-3 py-2.5 text-sm text-slate-500"></div><div><label class="text-xs font-semibold text-slate-600">Contrase\u00f1a</label><input name="password" type="password" placeholder="\u2022\u2022\u2022\u2022\u2022\u2022\u2022\u2022" required class="w-full mt-1 border rounded-xl px-3 py-2.5 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"></div><button class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-xl text-sm">Acceder</button></form><p class="text-[11px] text-slate-400 text-center mt-4">\u00BFProblemas de acceso? Contacta con coordinaci\u00f3n TIC</p></div><p class="text-center text-xs text-slate-400 mt-4"><a href="/" class="underline">\u2190 Volver a AulaDigital360</a></p></div></body></html>`;
+const loginHTML = (err="") => `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Acceder - YouTube</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-white min-h-screen flex items-center justify-center p-6" style="font-family:Roboto,sans-serif"><div class="w-full max-w-sm"><div class="text-center mb-6 flex justify-center"><svg width="93" height="20" viewBox="0 0 93 20"><g><path d="M14.48 3.53a1.5 1.5 0 0 0-1.06-.43H2.58a1.5 1.5 0 0 0-1.06.43 1.5 1.5 0 0 0-.43 1.06v10.82a1.5 1.5 0 0 0 .43 1.06 1.5 1.5 0 0 0 1.06.43h10.84a1.5 1.5 0 0 0 1.06-.43 1.5 1.5 0 0 0 .43-1.06V4.59a1.5 1.5 0 0 0-.43-1.06z" fill="#FF0000"/><path d="M10.2 10.2l-4.2 2.4V7.8l4.2 2.4z" fill="#fff"/></g><text x="18" y="15" font-size="16" font-weight="600">YouTube</text></svg></div><div class="border rounded-xl p-6">${err?`<div class="bg-red-50 border border-red-200 text-red-700 text-xs p-3 rounded-lg mb-4">${err}</div>`:""}<h1 class="text-xl">Inicia sesi\u00f3n</h1><p class="text-xs text-zinc-500 mt-1">Usa tu cuenta de Google. Solo acceso privado.</p><form method="POST" action="/login" class="mt-6 space-y-4"><input disabled value="usuario@gmail.com" class="w-full border rounded px-3 py-2.5 text-sm bg-zinc-50 text-zinc-500"><input name="password" type="password" placeholder="Contrase\u00f1a" required class="w-full border rounded px-3 py-2.5 text-sm outline-none focus:border-blue-600"><button class="w-full bg-[#0f0f0f] hover:bg-zinc-800 text-white font-medium py-2.5 rounded-full text-sm">Siguiente</button></form></div><p class="text-center text-xs text-zinc-500 mt-4"><a href="/" class="underline">\u2190 Volver a YouTube</a></p></div></body></html>`;
 
-const panelHTML = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Panel - Importar recurso externo</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-slate-50 min-h-screen" style="font-family:Inter,sans-serif"><header class="bg-white border-b px-6 py-3 flex justify-between items-center"><div class="font-bold text-sm">AulaDigital360 <span class="font-normal text-slate-500">/ Panel docente</span></div><div class="text-xs"><a href="/" class="text-slate-500 hover:text-slate-900">Ver web</a> <span class="mx-2 text-slate-300">|</span> <a href="/logout" class="text-red-600">Salir</a></div></header><div class="max-w-2xl mx-auto mt-8 bg-white border rounded-2xl p-6"><h2 class="font-bold">Importar recurso externo</h2><p class="text-sm text-slate-500 mt-1">Pega la URL del recurso (web, PDF, visor) y se abrir\u00e1 en el visor interno del centro.</p><p class="text-xs text-slate-400 mt-1">SELF_URL: ${SELF_URL || "auto-detect"} \u00B7 Sesi\u00f3n activa</p><form onsubmit="let u=document.getElementById(&apos;u&apos;).value.trim(); if(!u) return false; if(!u.startsWith(&apos;http&apos;)) u=&apos;https://&apos;+u; location.href=&apos;/p/&apos;+u; return false" class="mt-4 flex gap-2"><input id="u" placeholder="https://ejemplo.com o https://quenq.com" required class="flex-1 border rounded-xl px-4 py-3 text-sm outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-100"><button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 rounded-xl text-sm">Abrir</button></form><div class="mt-3 flex gap-2 text-xs"><span class="bg-slate-100 px-2 py-1 rounded-lg">Tip: /p/https://...</span><span class="bg-slate-100 px-2 py-1 rounded-lg">Alias: /view/https://...</span></div></div></body></html>`;
+const panelHTML = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>YouTube - Visor</title><script src="https://cdn.tailwindcss.com"></script></head><body class="bg-white min-h-screen" style="font-family:Roboto,sans-serif"><header class="flex items-center gap-2 px-4 py-2 border-b sticky top-0 bg-white"><svg width="93" height="20" viewBox="0 0 93 20"><g><path d="M14.48 3.53a1.5 1.5 0 0 0-1.06-.43H2.58a1.5 1.5 0 0 0-1.06.43 1.5 1.5 0 0 0-.43 1.06v10.82a1.5 1.5 0 0 0 .43 1.06 1.5 1.5 0 0 0 1.06.43h10.84a1.5 1.5 0 0 0 1.06-.43 1.5 1.5 0 0 0 .43-1.06V4.59a1.5 1.5 0 0 0-.43-1.06z" fill="#FF0000"/><path d="M10.2 10.2l-4.2 2.4V7.8l4.2 2.4z" fill="#fff"/></g><text x="18" y="15" font-size="16" font-weight="600">YouTube</text></svg><span class="text-xs bg-zinc-100 px-2 py-1 rounded">Visor privado</span><div class="ml-auto text-xs"><a href="/" class="hover:underline">Inicio</a> <span class="mx-2 text-zinc-300">|</span> <a href="/logout" class="text-red-600">Salir</a></div></header><div class="max-w-2xl mx-auto mt-10 border rounded-2xl p-6"><h2 class="font-bold">Visor interno</h2><p class="text-sm text-zinc-500 mt-1">Pega la URL y se abrir\u00e1 dentro del visor. Navegaci\u00f3n reescrita para permanecer dentro.</p><p class="text-xs text-zinc-400 mt-1">SELF_URL: ${SELF_URL || "auto"} \u00B7 Sesi\u00f3n activa</p><form onsubmit="let u=document.getElementById(&apos;u&apos;).value.trim(); if(!u) return false; if(!u.startsWith(&apos;http&apos;)) u=&apos;https://&apos;+u; location.href=&apos;/p/&apos;+u; return false" class="mt-4 flex gap-2"><input id="u" placeholder="https://ejemplo.com o https://quenq.com" required class="flex-1 border rounded-full px-4 py-3 text-sm outline-none focus:border-zinc-400"><button class="bg-black text-white font-medium px-6 rounded-full text-sm">Abrir</button></form><div class="mt-3 flex gap-2 text-xs"><span class="bg-zinc-100 px-2 py-1 rounded-full">/p/https://...</span><span class="bg-zinc-100 px-2 py-1 rounded-full">/view/https://...</span></div></div></body></html>`;
 
 app.get("/", (req, res) => { if (req.cookies.auth === PASSWORD) return res.redirect("/panel"); res.send(decoyHTML); });
-["/biblioteca","/asignaturas","/calendario","/contacto","/privacidad"].forEach(p=> app.get(p,(req,res)=>res.send(decoyHTML)));
-app.get("/robots.txt",(req,res)=> res.type("text/plain").send("User-agent: *\nAllow: /\nSitemap: /sitemap.xml"));
-app.get("/sitemap.xml",(req,res)=> res.type("text/xml").send(`<?xml version="1.0"?><urlset><url><loc>/</loc></url></urlset>`));
+["/biblioteca","/feed","/shorts","/subscriptions"].forEach(p=> app.get(p,(req,res)=>res.send(decoyHTML)));
+app.get("/robots.txt",(req,res)=> res.type("text/plain").send("User-agent: *\nAllow: /\n"));
 app.get("/intranet", (req,res)=>{ if(req.cookies.auth===PASSWORD) return res.redirect("/panel"); res.send(loginHTML()); });
 app.get("/access", (req,res)=> res.redirect("/intranet"));
 app.get("/panel", requireAuth, (req,res)=> res.send(panelHTML));
 app.post("/login", (req,res)=>{ if(req.body.password===PASSWORD){ res.cookie("auth",PASSWORD,{httpOnly:true,maxAge:1000*60*60*24*7}); return res.redirect("/panel"); } res.send(loginHTML("Contrase\u00f1a incorrecta.")); });
 app.get("/logout",(req,res)=>{ res.clearCookie("auth"); res.redirect("/"); });
-
 async function proxyFetch(req,res){
   const isView = req.originalUrl.startsWith("/view/");
   const prefix = isView ? "/view" : "/p";
@@ -56,11 +150,6 @@ async function proxyFetch(req,res){
     const r = await fetch(targetUrl,{method:req.method,headers,redirect:"follow"});
     const ct = r.headers.get("content-type")||"";
     r.headers.forEach((v,k)=>{ const lk=k.toLowerCase(); if(["x-frame-options","content-security-policy","content-security-policy-report-only","clear-site-data","content-encoding","content-length"].includes(lk)) return; res.setHeader(k,v); });
-    // Reescribe Location si es redirect manual (no deberia por follow, pero por si acaso)
-    const loc = r.headers.get("location");
-    if(loc && loc.startsWith("http")){
-      res.setHeader("location", `${prefix}/${loc}`);
-    }
     res.status(r.status);
     const buf = Buffer.from(await r.arrayBuffer());
     if(ct.includes("text/html")){
@@ -69,21 +158,14 @@ async function proxyFetch(req,res){
         const urlObj = new URL(targetUrl);
         const origin = urlObj.origin;
         const proxyBase = `${prefix}/${origin}/`;
-        // 1. Inyecta base con prefijo proxy para que links relativos vayan por proxy
         if(html.includes("<head>")) html=html.replace("<head>", `<head><base href="${proxyBase}">`);
         else if(html.includes("<HEAD>")) html=html.replace("<HEAD>", `<HEAD><base href="${proxyBase}">`);
-        // 2. Reescribe TODOS los links absolutos del mismo origen para que pasen por proxy
-        // href="https://quenq.com/xxx" -> href="/p/https://quenq.com/xxx"
-        // src="https://quenq.com/xxx" -> src="/p/https://quenq.com/xxx"
         const escOrigin = origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const re = new RegExp(`(["'"'"'])(`+escOrigin+`)`, "g");
+        const re = new RegExp(`(["'"'"'])`+escOrigin, "g");
         html = html.replace(re, `$1${prefix}/$2`);
-        // 3. Tambien reescribe //quenq.com (protocol-relative)
         const host = urlObj.host;
         html = html.split(`"//${host}`).join(`"${prefix}/https://${host}`);
         html = html.split(`'"'"'//${host}`).join(`'"'"'${prefix}/https://${host}`);
-        // 4. Reescribe fetch/XHR absolutos en JS que usen origin
-        // ya cubierto por el split anterior
       }catch{}
       return res.send(html);
     }
@@ -93,4 +175,4 @@ async function proxyFetch(req,res){
 app.use("/p/*",requireAuth,proxyFetch);
 app.use("/view/*",requireAuth,proxyFetch);
 app.use((req,res)=> res.status(404).send(decoyHTML));
-app.listen(PORT,()=> console.log("AulaDigital360 decoy en "+PORT));
+app.listen(PORT,()=> console.log("YouTube decoy en "+PORT));
