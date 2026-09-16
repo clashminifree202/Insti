@@ -160,8 +160,8 @@ async function proxyFetch(req,res){
         const origin = urlObj.origin;
         html = html.split(origin).join(`${prefix}/${origin}`);
         const proxyBase = `${prefix}/${origin}/`;
-        if(html.includes("<head>")) html=html.replace("<head>", `<head><base href="${proxyBase}">`);
-        else if(html.includes("<HEAD>")) html=html.replace("<HEAD>", `<HEAD><base href="${proxyBase}">`);
+        if(html.includes("<head>")) html=html.replace("<head>", `<head><base href="${proxyBase}"><style>#global-loader,.global-loader,.loader{display:none!important}</style>`);
+        else if(html.includes("<HEAD>")) html=html.replace("<HEAD>", `<HEAD><base href="${proxyBase}"><style>#global-loader,.global-loader,.loader{display:none!important}</style>`);
         const host = urlObj.host;
         html = html.split(`"//${host}`).join(`"${prefix}/https://${host}`);
         html = html.split(`'//${host}`).join(`'${prefix}/https://${host}`);
