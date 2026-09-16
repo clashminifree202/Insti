@@ -165,6 +165,17 @@ async function proxyFetch(req,res){
         const host = urlObj.host;
         html = html.split(`"//${host}`).join(`"${prefix}/https://${host}`);
         html = html.split(`'//${host}`).join(`'${prefix}/https://${host}`);
+        // Fix para que CSS/JS/imagenes con rutas relativas no se queden como texto solo
+        // href="/css/..." -> href="/p/https://quenq.com/css/..."
+        html = html.split('href="/').join(`href="${prefix}/${origin}/`);
+        html = html.split("href='/").join(`href='${prefix}/${origin}/`);
+        html = html.split('src="/').join(`src="${prefix}/${origin}/`);
+        html = html.split("src='/").join(`src='${prefix}/${origin}/`);
+        html = html.split('srcset="/').join(`srcset="${prefix}/${origin}/`);
+        // CSS url() relativas dentro de HTML/CSS/JS
+        html = html.split('url("/').join(`url("${prefix}/${origin}/`);
+        html = html.split("url('/").join(`url('${prefix}/${origin}/`);
+        html = html.split('url(/').join(`url(${prefix}/${origin}/`);
       }catch{}
       return res.send(html);
     }
