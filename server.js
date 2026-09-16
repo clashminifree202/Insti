@@ -153,20 +153,18 @@ async function proxyFetch(req,res){
     r.headers.forEach((v,k)=>{ const lk=k.toLowerCase(); if(["x-frame-options","content-security-policy","content-security-policy-report-only","clear-site-data","content-encoding","content-length"].includes(lk)) return; res.setHeader(k,v); });
     res.status(r.status);
     const buf = Buffer.from(await r.arrayBuffer());
-    if(ct.includes("text/html")){
+    if(ct.includes("text/html") || ct.includes("javascript") || ct.includes("css") || ct.includes("json")){
       let html=buf.toString("utf8");
       try{
         const urlObj = new URL(targetUrl);
         const origin = urlObj.origin;
+        html = html.split(origin).join(`${prefix}/${origin}`);
         const proxyBase = `${prefix}/${origin}/`;
         if(html.includes("<head>")) html=html.replace("<head>", `<head><base href="${proxyBase}">`);
         else if(html.includes("<HEAD>")) html=html.replace("<HEAD>", `<HEAD><base href="${proxyBase}">`);
-        const escOrigin = origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-        const re = new RegExp(`(["'"'"'])`+escOrigin, "g");
-        html = html.replace(re, `$1${prefix}/$2`);
         const host = urlObj.host;
         html = html.split(`"//${host}`).join(`"${prefix}/https://${host}`);
-        html = html.split(`'"'"'//${host}`).join(`'"'"'${prefix}/https://${host}`);
+        html = html.split(`'//${host}`).join(`'${prefix}/https://${host}`);
       }catch{}
       return res.send(html);
     }
@@ -177,4 +175,6 @@ app.use("/p/*",requireAuth,proxyFetch);
 app.use("/view/*",requireAuth,proxyFetch);
 app.use((req,res)=> res.status(404).send(decoyHTML));
 app.listen(PORT,()=> console.log("YouTube decoy en "+PORT));
+
+
 
