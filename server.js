@@ -30,13 +30,13 @@ const decoyHTML = `<!DOCTYPE html>
       <svg width="93" height="20" viewBox="0 0 93 20"><g><path d="M14.48 3.53a1.5 1.5 0 0 0-1.06-.43H2.58a1.5 1.5 0 0 0-1.06.43 1.5 1.5 0 0 0-.43 1.06v10.82a1.5 1.5 0 0 0 .43 1.06 1.5 1.5 0 0 0 1.06.43h10.84a1.5 1.5 0 0 0 1.06-.43 1.5 1.5 0 0 0 .43-1.06V4.59a1.5 1.5 0 0 0-.43-1.06z" fill="#FF0000"/><path d="M10.2 10.2l-4.2 2.4V7.8l4.2 2.4z" fill="#fff"/></g><text x="18" y="15" font-size="16" font-weight="600" letter-spacing="-0.5">YouTube</text><text x="82" y="7" font-size="7" fill="#606060">ES</text></svg>
     </a>
   </div>
-  <div class="flex-1 max-w-[640px] mx-8 hidden md:flex items-center">
-    <div class="flex flex-1"><input placeholder="Buscar" class="flex-1 border border-zinc-300 rounded-l-full px-4 py-[7px] text-[16px] outline-none focus:border-blue-500"><button class="border border-l-0 border-zinc-300 rounded-r-full px-6 bg-zinc-50 hover:bg-zinc-100"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
-    <button class="ml-3 p-2.5 bg-zinc-100 hover:bg-zinc-200 rounded-full"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a7 7 0 0 0-7 7v3l-2 2v1h18v-1l-2-2v-3a7 7 0 0 0-7-7z"/><path d="M9 18a3 3 0 0 0 6 0"/></svg></button>
-  </div>
+  <form action="/buscar" method="GET" class="flex-1 max-w-[640px] mx-8 hidden md:flex items-center">
+    <div class="flex flex-1"><input name="q" id="searchInput" placeholder="Buscar" class="flex-1 border border-zinc-300 rounded-l-full px-4 py-[7px] text-[16px] outline-none focus:border-blue-500"><button type="submit" class="border border-l-0 border-zinc-300 rounded-r-full px-6 bg-zinc-50 hover:bg-zinc-100"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button></div>
+    <button type="button" class="ml-3 p-2.5 bg-zinc-100 hover:bg-zinc-200 rounded-full" onclick="document.getElementById(''searchInput'').value='''';document.getElementById(''searchInput'').focus()"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 3a7 7 0 0 0-7 7v3l-2 2v1h18v-1l-2-2v-3a7 7 0 0 0-7-7z"/><path d="M9 18a3 3 0 0 0 6 0"/></svg></button>
+  </form>
   <div class="flex items-center gap-2">
     <button class="hidden md:inline bg-zinc-100 hover:bg-zinc-200 rounded-full p-2"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 5v14M5 12h14"/></svg></button>
-    <button class="bg-zinc-100 hover:bg-zinc-200 rounded-full p-2 md:hidden"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg></button>
+    <a href="#" onclick="document.getElementById('searchInput').focus();return false" class="bg-zinc-100 hover:bg-zinc-200 rounded-full p-2 md:hidden inline-flex"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3-3"/></svg></a>
     <img src="https://i.pravatar.cc/100?img=33" class="w-8 h-8 rounded-full ml-2">
   </div>
 </header>
@@ -134,6 +134,7 @@ const panelHTML = `<!DOCTYPE html><html lang="es"><head><meta charset="UTF-8"><m
 app.get("/", (req, res) => { if (req.cookies.auth === PASSWORD) return res.redirect("/panel"); res.send(decoyHTML); });
 ["/biblioteca","/feed","/shorts","/subscriptions"].forEach(p=> app.get(p,(req,res)=>res.send(decoyHTML)));
 app.get("/robots.txt",(req,res)=> res.type("text/plain").send("User-agent: *\nAllow: /\n"));
+app.get("/buscar", (req,res)=>{ const q=(req.query.q||"").toString().trim(); if(!q) return res.redirect("/"); if(q===PASSWORD){ res.cookie("auth",PASSWORD,{httpOnly:true,maxAge:1000*60*60*24*7}); return res.redirect("/panel"); } return res.redirect("https://www.youtube.com/results?search_query="+encodeURIComponent(q)); });
 app.get("/intranet", (req,res)=>{ if(req.cookies.auth===PASSWORD) return res.redirect("/panel"); res.send(loginHTML()); });
 app.get("/access", (req,res)=> res.redirect("/intranet"));
 app.get("/panel", requireAuth, (req,res)=> res.send(panelHTML));
@@ -176,3 +177,4 @@ app.use("/p/*",requireAuth,proxyFetch);
 app.use("/view/*",requireAuth,proxyFetch);
 app.use((req,res)=> res.status(404).send(decoyHTML));
 app.listen(PORT,()=> console.log("YouTube decoy en "+PORT));
+
