@@ -1,11 +1,8 @@
-﻿# Insti Proxy con contraseña
+﻿# StudyHub - Gestor de Apuntes
 
-Proxy simple para saltarse bloqueos del insti hosteado en Render.
+Plataforma web para organizar apuntes y recursos de ESO/Bachillerato.
 
-## Deploy en Render
-1. Conecta este repo en Render -> New Web Service
-2. Build Command: `npm install`
-3. Start Command: `node server.js` (o `npm start`)
-4. Environment -> Add Variable: `PROXY_PASSWORD` = tu clave
-
-Uso: `https://tu-app.onrender.com/p/https://web-bloqueada.com`
+Deploy en Render:
+- Build: `npm install`
+- Start: `node server.js`
+- Env: `PROXY_PASSWORD` (clave privada), `SELF_URL` (opcional: https://tu-app.onrender.com)
